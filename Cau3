@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Cau3 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap vao so luong phan tu: n = ");
+
+int[] a={1,2,3,4,5,6,7,8,9,10};
+
+
+
+
+        for (int i = 0; i < 11; i++) {
+            System.out.print(i);
+
+        }
+
+
+
+        int min = a[0];
+        for (int num: a) {
+            if (min > num) {
+                min = num;
+            }
+        }
+
+        System.out.println("\nPhan tu nho nhat cua mang la:" + min);
+
+
+    }}
