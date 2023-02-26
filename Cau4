@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Cau4 {
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int[] a={1,2,3,4,5,6,7,8,9,10};
+        for(int i=0; i<11;i++){
+            System.out.println(i);
+        }
+        System.out.println("Các số nguyên tố là: ");
+        for (int i = 0; i < 11; i++) {
+            if (isPrimeNumber(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+
+    public static boolean isPrimeNumber(int n) {
+        // so nguyen n < 2 khong phai la so nguyen to
+        if (n < 2) {
+            return false;
+        }
+        // check so nguyen to khi n >= 2
+        int squareRoot = (int) Math.sqrt(n);
+        for (int i = 2; i <= squareRoot; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }}
